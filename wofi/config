@@ -1,0 +1,32 @@
+# ---------- Apariencia ----------
+show = drun
+prompt = Buscar...
+allow-images = true
+image-size = 32
+width = 600
+height = 400
+horizontal = false
+location = center
+
+# ---------- Comportamiento ----------
+matching = fuzzy
+mode = drun
+parse-search = true
+no-actions = true
+allow-markup = false
+hide-scroll = true
+
+# ---------- Teclas ----------
+key-up = Up
+key-down = Down
+key-left = Left
+key-right = Right
+key-accept = Return
+key-clear = Ctrl+BackSpace
+
+# ---------- Resultados ----------
+lines = 10
+columns = 1
+
+# ---------- Fondo (si se quiere translucido) ----------
+#transparent = true

@@ -1,0 +1,52 @@
+window {
+    margin: 0px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #a6adc8;
+    background-color: #1e1e2e;
+    font-family: "Hack Nerd Font", sans-serif;
+    font-size: 14px;
+    color: #cdd6f4;
+}
+
+#input {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #45475a;
+    background-color: #181825;
+    color: #cdd6f4;
+}
+
+#inner-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+#scroll {
+    margin-top: 8px;
+}
+
+#entry {
+    padding: 6px 10px;
+    margin: 4px 0;
+    border-radius: 6px;
+    transition: background 0.1s;
+}
+
+#entry:selected {
+    background-color: #313244;
+}
+
+#entry image {
+    margin-right: 8px;
+}
+
+#text {
+    padding-left: 2px;
+}

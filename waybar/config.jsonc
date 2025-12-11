@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+  "pulseaudio",
+  "battery",
+  "custom/ip",
+  "custom/kb",
+  "custom/containers",
+  "tray"
+  ],
+
+  // Workspaces
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true
+  },
+
+  // Clock
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  // Audio
+  "pulseaudio": {
+    "format": "{volume}% ",
+    "format-muted": "muted ",
+    "scroll-step": 5
+  },
+
+  // Battery with charging lightning
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "format": "{capacity}% {icon}",
+    "format-charging": "⚡ {capacity}% {icon}",
+    "format-plugged": "⚡ {capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+
+  // IP module (script)
+  "custom/ip": {
+    "exec": "~/.config/waybar/scripts/ip.sh",
+    "interval": 10,
+    "return-type": "text"
+  },
+
+  // Keyboard layout
+  "custom/kb": {
+  "exec": "~/.config/waybar/scripts/kblayout.sh",
+  "interval": 5,
+  "return-type": "text"
+},
+
+  // Docker containers module (script)
+  "custom/containers": {
+  "exec": "~/.config/waybar/scripts/docker.sh",
+  "interval": 5,
+  "tooltip": true,
+  "tooltip-format": "Contenedores activos: {output}",
+  "return-type": "text"
+},
+
+  // System tray
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  }
+}
