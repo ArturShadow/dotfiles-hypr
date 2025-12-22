@@ -1,0 +1,65 @@
+[global]
+    monitor = 0
+    follow = keyboard
+    width = (0, 350)
+    height = (0, 300)
+    origin = top-right
+    offset = (20,20)
+    scale = 0
+
+    # Apariencia
+    transparency = 10
+    frame_width = 2
+    frame_color = "#5e60ce"
+    separator_color = frame
+
+    font = "Hack Nerd Font 12"
+    line_height = 4
+    corner_radius = 12
+    padding = 12
+    horizontal_padding = 12
+
+    # Colores base
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+
+    # Iconos
+    icon_position = left
+    max_icon_size = 48
+    icon_path = /usr/share/icons/hicolor/48x48/status:/usr/share/icons
+
+    # Tiempo de vida
+    idle_threshold = 120
+    timeout = 6
+    show_age_threshold = 60
+
+    # Historia
+    history_length = 20
+
+    # Formato de notificación
+    format = "<b>%s</b>\n%b"
+
+    # Progreso
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#a6adc8"
+    frame_color = "#45475a"
+    timeout = 4
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#5e60ce"
+    timeout = 6
+
+[urgency_critical]
+    background = "#b30e2e"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 0
