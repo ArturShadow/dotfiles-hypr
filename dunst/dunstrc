@@ -1,16 +1,18 @@
 [global]
     monitor = 0
     follow = keyboard
-    width = (0, 350)
-    height = (0, 300)
+
+    width = (0, 360)
+    height = (0, 140)
+
     origin = top-right
     offset = (20,20)
     scale = 0
 
     # Apariencia
-    transparency = 10
+    transparency = 0
     frame_width = 2
-    frame_color = "#5e60ce"
+    frame_color = "#8B5CF6"
     separator_color = frame
 
     font = "Hack Nerd Font 12"
@@ -20,8 +22,8 @@
     horizontal_padding = 12
 
     # Colores base
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
+    background = "#0A0A12"
+    foreground = "#ECECFF"
 
     # Iconos
     icon_position = left
@@ -33,33 +35,36 @@
     timeout = 6
     show_age_threshold = 60
 
-    # Historia
+    # Historial
     history_length = 20
 
     # Formato de notificación
     format = "<b>%s</b>\n%b"
 
-    # Progreso
+    # Barra de progreso
     progress_bar = true
     progress_bar_height = 8
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 300
 
+
 [urgency_low]
-    background = "#1e1e2e"
-    foreground = "#a6adc8"
-    frame_color = "#45475a"
+    background = "#14142B"
+    foreground = "#B4B4E0"
+    frame_color = "#2A2A40"
     timeout = 4
 
+
 [urgency_normal]
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    frame_color = "#5e60ce"
+    background = "#0A0A12"
+    foreground = "#ECECFF"
+    frame_color = "#8B5CF6"
     timeout = 6
 
+
 [urgency_critical]
-    background = "#b30e2e"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
+    background = "#0A0A12"
+    foreground = "#ECECFF"
+    frame_color = "#EF4444"
     timeout = 0
