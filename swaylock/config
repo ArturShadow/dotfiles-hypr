@@ -1,0 +1,48 @@
+# ==============================
+# Swaylock-effects — Morado Futurista
+# ==============================
+
+daemonize
+clock
+indicator
+indicator-caps-lock
+
+font=Hack Nerd Font
+font-size=28
+
+timestr=%H:%M
+datestr=%A, %d %B
+
+# Fondo base
+color=0A0A12
+
+# Colores base
+text-color=ECECFF
+inside-color=14142B
+ring-color=2A2A40
+line-color=00000000
+separator-color=00000000
+
+# Highlights al escribir
+key-hl-color=A78BFA
+bs-hl-color=EF4444
+
+# Verificando
+inside-ver-color=14142B
+ring-ver-color=A78BFA
+text-ver-color=ECECFF
+
+# Error
+inside-wrong-color=14142B
+ring-wrong-color=EF4444
+text-wrong-color=EF4444
+
+# Clear
+inside-clear-color=14142B
+ring-clear-color=8B5CF6
+text-clear-color=ECECFF
+
+# ── EFECTOS (solo en swaylock-effects) ──
+effect-blur=7x5
+effect-vignette=0.25:0.5
+fade-in=0.2

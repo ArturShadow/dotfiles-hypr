@@ -1,0 +1,86 @@
+/* ============================================================
+   Wlogout — Morado Futurista (Hyprland / Wayland)
+   ============================================================ */
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "Hack Nerd Font";
+}
+
+/* Fondo general */
+window {
+    background-color: rgba(10, 10, 18, 0.88); /* #0A0A12 */
+}
+
+/* Botones */
+button {
+    border-radius: 18px;
+    border: 2px solid #2A2A40;
+
+    color: #ECECFF;
+    background-color: #14142B;
+
+    margin: 20px;
+    min-width: 140px;
+    min-height: 140px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32%;
+}
+
+/* Hover / Focus */
+button:hover,
+button:focus,
+button:active {
+    background-color: rgba(139, 92, 246, 0.28); /* #8B5CF6 */
+    border-color: #A78BFA;
+    outline: none;
+}
+
+/* =======================
+   Iconos
+   ======================= */
+
+#lock {
+    background-image: image(
+        url("/usr/share/wlogout/icons/lock.png"),
+        url("/usr/local/share/wlogout/icons/lock.png")
+    );
+}
+
+#logout {
+    background-image: image(
+        url("/usr/share/wlogout/icons/logout.png"),
+        url("/usr/local/share/wlogout/icons/logout.png")
+    );
+}
+
+#suspend {
+    background-image: image(
+        url("/usr/share/wlogout/icons/suspend.png"),
+        url("/usr/local/share/wlogout/icons/suspend.png")
+    );
+}
+
+#hibernate {
+    background-image: image(
+        url("/usr/share/wlogout/icons/hibernate.png"),
+        url("/usr/local/share/wlogout/icons/hibernate.png")
+    );
+}
+
+#shutdown {
+    background-image: image(
+        url("/usr/share/wlogout/icons/shutdown.png"),
+        url("/usr/local/share/wlogout/icons/shutdown.png")
+    );
+}
+
+#reboot {
+    background-image: image(
+        url("/usr/share/wlogout/icons/reboot.png"),
+        url("/usr/local/share/wlogout/icons/reboot.png")
+    );
+}

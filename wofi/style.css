@@ -1,52 +1,90 @@
-window {
-    margin: 0px;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid #a6adc8;
-    background-color: #1e1e2e;
+/* ============================================================
+   Wofi — Grid de iconos (4 por fila)
+   Tema: Morado Futurista (Opción B)
+   ============================================================ */
+
+* {
+    all: unset;
     font-family: "Hack Nerd Font", sans-serif;
     font-size: 14px;
-    color: #cdd6f4;
 }
 
-#input {
-    margin-bottom: 12px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #45475a;
-    background-color: #181825;
-    color: #cdd6f4;
-}
-
-#inner-box {
+/* Ventana principal */
+window {
     margin: 0px;
-    padding: 0px;
+    padding: 18px;
+    border-radius: 16px;
+    border: 2px solid #2A2A40;
+    background-color: #0A0A12;
+    color: #ECECFF;
 }
 
+/* Contenedor externo */
 #outer-box {
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
 }
 
+/* Input de búsqueda */
+#input {
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid #2A2A40;
+    background-color: #14142B;
+    color: #ECECFF;
+}
+
+#input:focus {
+    border: 1px solid #8B5CF6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25);
+}
+
+/* Scroll */
 #scroll {
     margin-top: 8px;
 }
 
+/* Caja interna (grid) */
+#inner-box {
+    padding: 0;
+}
+
+/* Cada entrada = icono */
 #entry {
-    padding: 6px 10px;
-    margin: 4px 0;
-    border-radius: 6px;
-    transition: background 0.1s;
+    margin: 6px;
+    padding: 14px;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 16px;
+    background-color: transparent;
+    transition: background-color 0.12s ease, border 0.12s ease;
 }
 
-#entry:selected {
-    background-color: #313244;
-}
-
-#entry image {
-    margin-right: 8px;
-}
-
+/* ✅ Oculta SOLO el texto de las apps (no toca #input) */
+#entry label,
+#entry #text,
 #text {
-    padding-left: 2px;
+  display: none;
+}
+
+/* Iconos centrados */
+#entry image {
+    margin: 0;
+}
+
+/* Selección */
+#entry:selected {
+    background-color: rgba(139, 92, 246, 0.28);
+    border: 1px solid rgba(167, 139, 250, 0.5);
+}
+
+/* Icono seleccionado */
+#entry:selected image {
+    opacity: 1.0;
+}
+
+/* Prompt (si se muestra) */
+#prompt {
+    color: #A78BFA;
+    margin-right: 8px;
 }

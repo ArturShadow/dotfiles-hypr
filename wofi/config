@@ -1,32 +1,29 @@
 # ---------- Apariencia ----------
-show = drun
-prompt = Buscar...
-allow-images = true
-image-size = 32
-width = 600
-height = 400
-horizontal = false
-location = center
+show=drun
+prompt=Buscar...
+allow_images=true
+image_size=48
+width=600
+height=420
+location=center
 
 # ---------- Comportamiento ----------
-matching = fuzzy
-mode = drun
-parse-search = true
-no-actions = true
-allow-markup = false
-hide-scroll = true
-
-# ---------- Teclas ----------
-key-up = Up
-key-down = Down
-key-left = Left
-key-right = Right
-key-accept = Return
-key-clear = Ctrl+BackSpace
+matching=fuzzy
+parse_search=true
+no_actions=true
+allow_markup=false
+hide_scroll=true
+insensitive=true
+gtk_dark=true
 
 # ---------- Resultados ----------
-lines = 10
-columns = 1
+columns=4
+lines=4
 
-# ---------- Fondo (si se quiere translucido) ----------
-#transparent = true
+# ---------- Teclas ----------
+key_up=Up
+key_down=Down
+key_left=Left
+key_right=Right
+key_accept=Return
+key_clear=Ctrl+BackSpace
