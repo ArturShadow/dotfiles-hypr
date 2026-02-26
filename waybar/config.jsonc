@@ -67,7 +67,7 @@
 
   "custom/kb": {
     "exec": "~/.config/waybar/scripts/kblayout.sh",
-    "interval": 5,
+    "interval": 1,
     "return-type": "text"
   },
 
