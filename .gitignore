@@ -1,92 +1,177 @@
-aura/**
-bluetuith/**
-BraveSoftware/**
-btop/**
-Code/**
-dconf/
-discord/**
-Electron/**
-elecwhat/**
-go/**
-google-chrome/**
-gtk-3.0/**
-libreoffice/**
-marktext/**
-obsidian/**
-opera/**
-pulse/**
-Thunar/**
-xfce4/**
-zed/**
-heroic/**
-ngrok/**
-KDE/**
-Trolltech.conf
-baloofilerc
-bluedevilglobalrc
-discoverrc
-filetypesrc
-gtk-4.0/**
-gtkrc
-gtkrc-2.0
-kactivitymanagerd-statsrc
-kactivitymanagerdrc
-kcminputrc
-kconf_updaterc
-kded5rc
-kdedefaults/**
-kdeglobals 
-kglobalshortcutsrc
-ksmserverrc
-ktimezonedrc
-kwalletrc
-kwinoutputconfig.json
-kwinrc
-libaccounts-glib/**
-nvim/**
-plasma-localerc
-plasma-org.kde.plasma.desktop-appletsrc
-plasma-welcomerc
-plasmanotifyrc
-plasmarc
-plasmashellrc
-powermanagementprofilesrc
-session/**
-spectaclerc
-user-dirs.dirs
-user-dirs.locale
-xsettingsd/**
-mimeapps.list
-pavucontrol.ini
-CurseForge/
+# =========================================
+# Ignore everything by default
+# =========================================
+
+*
+
+# =========================================
+# Allow folders/files for dotfiles
+# =========================================
+
+!.gitignore
+!README.md
+
+!hypr/
+!waybar/
+!kitty/
+!nvim/
+!dunst/
+!wofi/
+!btop/
+!gtk-3.0/
+!Thunar/
+!yazi/
+!swaylock/
+!wlogout/
+!bluetuith/
+!xsettingsd/
+!lightdm/
+!mopidy/
+
+# =========================================
+# Allow common config file types
+# =========================================
+
+!*/
+!**/*.conf
+!**/*.config
+!**/*.css
+!**/*.json
+!**/*.jsonc
+!**/*.ini
+!**/*.toml
+!**/*.yaml
+!**/*.yml
+!**/*.sh
+!**/*.zsh
+!**/*.txt
+!**/*.md
+!**/*.service
+!**/*.rules
+
+# =========================================
+# Secrets / sensitive data
+# =========================================
+
+**/*.pem
+**/*.key
+**/*.crt
+**/*.p12
+**/*.db
+**/*token*
+**/*secret*
+**/*cookie*
+**/*session*
+**/*.kdbx
+
+# =========================================
+# Git repositories inside repo
+# =========================================
+
+**/.git/
+
+# =========================================
+# Cache / temporary files
+# =========================================
+
+.cache/
+*.cache
+*.log
+*.tmp
+*.bak
+*.old
+*.swp
+*.swo
+
+# =========================================
+# Browsers
+# =========================================
+
+BraveSoftware/
+google-chrome/
+opera/
+
+# =========================================
+# VSCode
+# =========================================
+
+Code/
+
+# =========================================
+# Electron / Chromium apps
+# =========================================
+
+Electron/
+discord/
 Notion/
-PlasmaDiscoverUpdates
-QtProject.conf
-authpass/
-autostart/
-baloofileinformationrc
-configstore/
-dolphinrc
-drkonqirc
-emaildefaults
-freerdp/
-galculator/
-kdeconnect/
-kiorc
-klipperrc
-krdpserverrc
-krunnerrc
-kscreenlockerrc
-kxkbrc
-libreoffice.bak/
-menus/
-nvim/
+marktext/
+CurseForge/
 ow-electron/
-plasma-nm
-plasmaparc
+configstore/
+heroic/
+
+# =========================================
+# KDE / Plasma machine-specific
+# =========================================
+
+KDE/
+kwinoutputconfig.json
+kscreenlockerrc
+powermanagementprofilesrc
 powerdevilrc
-remmina/
-sddmthemeinstallerrc
+kactivitymanagerd-statsrc
+plasma-nm/
+session/
+
+# =========================================
+# Qt runtime configs
+# =========================================
+
+QtProject.conf
+Trolltech.conf
+
+# =========================================
+# Runtime / low-value configs
+# =========================================
+
+galculator/
+go/
+elecwhat/
+pavucontrol.ini
+yay/
+libreoffice/
+libreoffice.bak/
+pulse/
+dconf/user
+
+# =========================================
+# Accounts / credentials
+# =========================================
+
+ngrok/
+kdeconnect/
+libaccounts-glib/
 signond/
-systemmonitorrc
-trashrc
+authpass/
+remmina/
+
+# =========================================
+# KeepassXC
+# =========================================
+
+keepassxc/*
+!keepassxc/keepassxc.ini
+
+# =========================================
+# Obsidian runtime/cache
+# =========================================
+
+obsidian/workspace.json
+obsidian/*.db
+obsidian/Cache/
+
+# =========================================
+# Temp/manual files
+# =========================================
+
+git-status.txt

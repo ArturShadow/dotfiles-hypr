@@ -1,0 +1,3 @@
+clúster
+desarrolladores
+checksum_v1 = 591ba5160313857e6f64076cc125264d
