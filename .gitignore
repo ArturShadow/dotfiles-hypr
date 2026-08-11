@@ -48,6 +48,8 @@
 !**/*.md
 !**/*.service
 !**/*.rules
+!hypr/*.lua
+!hypr/modules/*.lua
 
 # =========================================
 # Secrets / sensitive data
