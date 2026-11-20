@@ -17,16 +17,18 @@ hl.window_rule({
     no_focus = true,
 })
 
-hl.window_rule({ name = "brave-environment", match = { class = "brave-browser" }, workspace = "1" })
+hl.window_rule({ name = "chromium-environment", match = { class = "chromium" }, workspace = "1" })
 hl.window_rule({ name = "chatgpt-codex", match = { class = "codex-desktop" }, workspace = "3" })
 hl.window_rule({ name = "kitty", match = { class = "kitty" }, workspace = "4" })
 hl.window_rule({
-    name = "BB-FE-contract-statement",
-    match = { class = "code", title = "- BB-FE-contract-statement - Visual Studio Code$" },
-    workspace = "11",
+    name = "visual-studio-code",
+    match = { class = "code" },
+    -- Move Code to workspace 2 without stealing the focus while it starts.
+    workspace = "2 silent",
 })
 hl.window_rule({ name = "bb-backend", match = { title = "^BB-Backend$" }, workspace = "12" })
 hl.window_rule({ name = "imvu", match = { title = "Loading IMVU" }, workspace = "special:imvu" })
+hl.window_rule({ name = "ncspot", match = { class = "^ncspot$" }, workspace = "special:ncspot" })
 hl.window_rule({
     name = "proton-pass",
     match = { class = "^(proton-pass|Proton Pass)$" },
@@ -46,4 +48,12 @@ hl.window_rule({
 })
 
 hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1" })
-hl.workspace_rule({ workspace = "2", monitor = "eDP-1" })
+hl.workspace_rule({
+    workspace = "2",
+    monitor = "eDP-1",
+})
+
+hl.on("workspace.created", function(ws)
+    if not ws.is_empty or ws.name ~= "2" then return end
+    hl.exec_cmd("code /home/lbluis/workspace/BB-FE-contract-statement")
+end)

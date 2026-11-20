@@ -1,90 +1,124 @@
 {
   "layer": "top",
   "position": "top",
+  "output": ["eDP-1"],
   "height": 34,
   "spacing": 5,
   "margin-top": 4,
   "margin-left": 6,
   "margin-right": 6,
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-left": ["hyprland/workspaces", "mpris#ncspot"],
+  "modules-center": ["clock"],
   "modules-right": [
-    "pulseaudio",
-    "battery",
-    "memory",
-    "cpu",
-    "custom/kb",
-    "custom/containers",
     "custom/ip",
-    "tray"
+    "custom/containers",
+    "cpu",
+    "memory",
+    "battery",
+    "pulseaudio",
+    "tray",
+    "custom/power",
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{name}"
+    "format": "{name}",
+  },
+  "mpris#ncspot": {
+    "player": "ncspot",
+    "format": "{status_icon} {artist} — {title}",
+    "format-paused": "{status_icon} {artist} — {title}",
+    "max-length": 50,
+    "player-icons": {
+      "ncspot": "",
+      "default": "♪",
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": "",
+    },
+    "on-click": "playerctl --player=ncspot play-pause",
+    "on-click-middle": "playerctl --player=ncspot play-pause",
+    "on-scroll-up": "playerctl --player=ncspot next",
+    "on-scroll-down": "playerctl --player=ncspot previous",
+    "tooltip-format": "{player_icon} {artist} — {title}\n{album}",
+  },
+  "custom/ncspot-prev": {
+    "format": "",
+    "exec-if": "playerctl --player=ncspot status",
+    "interval": 2,
+    "on-click": "playerctl --player=ncspot previous",
+    "tooltip-format": "Canción anterior",
+  },
+  "custom/ncspot-play": {
+    "exec": "~/.config/waybar/scripts/ncspot-status.sh",
+    "exec-if": "playerctl --player=ncspot status",
+    "interval": 1,
+    "on-click": "playerctl --player=ncspot play-pause",
+    "tooltip-format": "Reproducir / pausar",
+  },
+  "custom/ncspot-next": {
+    "format": "",
+    "exec-if": "playerctl --player=ncspot status",
+    "interval": 2,
+    "on-click": "playerctl --player=ncspot next",
+    "tooltip-format": "Siguiente canción",
   },
   "clock": {
-    "format": "  {:%Y-%m-%d %H:%M}",
+    "format": "  {:%a %d/%m · %H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%A, %d %B %Y}"
+    "tooltip-format": "{:%A, %d %B %Y}",
   },
   "pulseaudio": {
     "format": "{volume}% ",
     "format-muted": "muted ",
     "scroll-step": 5,
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
   "battery": {
-    "bat": "BAT0",
+    "bat": "BAT1",
     "adapter": "AC",
     "format": "{capacity}% {icon}",
     "format-charging": "⚡ {capacity}% {icon}",
     "format-plugged": "⚡ {capacity}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", "", "", ""],
     "states": {
       "warning": 20,
-      "critical": 10
+      "critical": 10,
     },
     "tooltip": true,
-    "tooltip-format": "Battery: {capacity}%\nTime: {time}"
+    "tooltip-format": "Battery: {capacity}%\nTime: {time}",
   },
   "custom/ip": {
     "exec": "~/.config/waybar/scripts/ip.sh",
     "interval": 10,
-    "return-type": "text"
-  },
-  "custom/kb": {
-    "exec": "~/.config/waybar/scripts/kblayout.sh",
-    "interval": 1,
-    "return-type": "text"
+    "return-type": "json",
+    "tooltip": true,
   },
   "custom/containers": {
     "exec": "~/.config/waybar/scripts/docker.sh",
     "interval": 5,
     "tooltip": true,
-    "tooltip-format": "Contenedores activos: {}",
-    "return-type": "text"
+    "tooltip-format": "Active containers: {}",
+    "return-type": "text",
+    "on-click": "kitty -e lazydocker",
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 8
+    "spacing": 6,
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip-format": "Session menu",
+    "on-click": "wlogout",
   },
   "memory": {
     "interval": 5,
     "format": " {percentage}%",
     "tooltip": true,
-    "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G"
+    "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G",
   },
   "cpu": {
     "interval": 2,
@@ -92,7 +126,7 @@
     "format-alt": " {avg_frequency} GHz",
     "states": {
       "warning": 60,
-      "critical": 85
-    }
-  }
+      "critical": 85,
+    },
+  },
 }

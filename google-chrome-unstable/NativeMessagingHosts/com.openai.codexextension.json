@@ -1,0 +1,9 @@
+{
+  "allowed_origins": [
+    "chrome-extension://hehggadaopoacecdllhhajmbjkdcmajg/"
+  ],
+  "description": "ChatGPT Chrome native messaging host",
+  "name": "com.openai.codexextension",
+  "path": "/home/lbluis/.codex/plugins/cache/openai-bundled/chrome/latest/extension-host/linux/x64/extension-host",
+  "type": "stdio"
+}

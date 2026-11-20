@@ -10,7 +10,8 @@ hl.config({
             },
             inactive_border = "rgba(2A2A40CC)",
         },
-        resize_on_border = false,
+        -- Permite redimensionar arrastrando cualquier borde de la ventana.
+        resize_on_border = true,
         allow_tearing = false,
         layout = "dwindle",
     },

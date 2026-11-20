@@ -1,0 +1,22 @@
+{
+    "Group 1": [
+        {
+            "x": 2279,
+            "y": 364,
+            "height": 192,
+            "width": 517,
+            "color": "orange",
+            "title": "UI Design",
+            "text": "#check:0revisar los textos de Contract Highlight, Authorization card, progress payment summary\n#check:0revisar las traducciones\n#check:0redisen\u00f1ar contract highlights\n#check:0"
+        },
+        {
+            "x": 2259,
+            "y": 424,
+            "height": 200,
+            "width": 250,
+            "color": "blue",
+            "title": "",
+            "text": "Cambiiar el texto de messageError: \"\ncambiar textos de api a llaves para traducir"
+        }
+    ]
+}

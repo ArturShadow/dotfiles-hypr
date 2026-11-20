@@ -9,6 +9,11 @@ hl.env("HYPRCURSOR_SIZE", "24")
 require("modules.decorations")
 
 hl.config({
+    debug = {
+        disable_logs = false,
+        gl_debugging = true,
+    },
+
     input = {
         kb_layout = "us,latam",
         kb_variant = "intl",

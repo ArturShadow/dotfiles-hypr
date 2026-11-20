@@ -1,0 +1,84 @@
+/* MiTema — Hyprland + Kitty palette */
+@define-color bg #0A0A12;
+@define-color panel #111122;
+@define-color panel_alt #1B1B2A;
+@define-color fg #ECECFF;
+@define-color muted #B4B4E0;
+@define-color accent #A78BFA;
+@define-color accent_strong #8B5CF6;
+@define-color cyan #22D3EE;
+@define-color danger #EF4444;
+
+* {
+    -GtkWidget-focus-padding: 2;
+    -GtkWidget-focus-line-width: 1;
+    font-family: "Hack Nerd Font";
+    color: @fg;
+}
+
+window,
+window.background,
+.background {
+    background-color: @bg;
+}
+
+frame,
+dialog,
+popover,
+menu,
+entry,
+combobox button,
+button {
+    background-color: @panel;
+    border: 1px solid @panel_alt;
+    border-radius: 8px;
+}
+
+entry {
+    min-height: 38px;
+    padding: 0 12px;
+    caret-color: @accent;
+}
+
+button {
+    min-height: 36px;
+    padding: 0 16px;
+}
+
+button:hover,
+button:focus,
+entry:focus,
+combobox button:focus {
+    border-color: @accent;
+    box-shadow: 0 0 0 1px @accent;
+}
+
+button:active,
+button:checked,
+row:selected,
+menuitem:hover {
+    background-color: @accent_strong;
+    color: @bg;
+}
+
+label.dim-label,
+scale value,
+separator {
+    color: @muted;
+}
+
+checkbutton check,
+radiobutton radio {
+    border-color: @muted;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: @accent;
+    border-color: @accent;
+}
+
+tooltip {
+    background-color: @panel_alt;
+    border: 1px solid @accent;
+}
