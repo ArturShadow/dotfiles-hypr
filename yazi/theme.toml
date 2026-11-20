@@ -3,8 +3,6 @@
 
 # If you want to dynamically override their content based on dark/light mode, you can specify two different flavors
 # for dark and light modes under `[flavor]`, and do so in those flavors instead.
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
-
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # : Flavor {{{
@@ -13,9 +11,8 @@
 #use = "tokyo-night"
 #dark  = "tokyo-night"
 #light = "tokyo-night"
-use = "tokyo-night"
-# For Yazi 0.4 and above
-dark = "tokyo-night"
+# The tokyo-night package is not installed locally. Keep the built-in theme
+# until the package is installed, otherwise Yazi fails during startup.
 # : }}}
 
 
@@ -242,16 +239,16 @@ rules = [
 	# { mime = "inode/empty", fg = "red" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "red" },
-	{ name = "*", is = "exec"  , fg = "green" },
+	{ url = "*", is = "orphan", bg = "red" },
+	{ url = "*", is = "exec"  , fg = "green" },
 
 	# Dummy files
-	{ name = "*", is = "dummy", bg = "red" },
-	{ name = "*/", is = "dummy", bg = "red" },
+	{ url = "*", is = "dummy", bg = "red" },
+	{ url = "*/", is = "dummy", bg = "red" },
 
 	# Fallback
 	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "blue" }
+	{ url = "*/", fg = "blue" }
 ]
 
 # : }}}

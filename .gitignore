@@ -48,6 +48,8 @@
 !**/*.md
 !**/*.service
 !**/*.rules
+!hypr/*.lua
+!hypr/modules/*.lua
 
 # =========================================
 # Secrets / sensitive data
@@ -88,20 +90,36 @@
 # =========================================
 
 BraveSoftware/
+chromium/
 google-chrome/
+google-chrome-beta/
+microsoft-edge/
+microsoft-edge-beta/
+mozilla/
 opera/
+vivaldi/
+
+# =========================================
+# Proton apps
+# =========================================
+
+Proton Pass/
+me.proton.authenticator/
 
 # =========================================
 # VSCode
 # =========================================
 
 Code/
+VSCodium/
 
 # =========================================
 # Electron / Chromium apps
 # =========================================
 
 Electron/
+Codex/
+codex-desktop/
 discord/
 Notion/
 marktext/
@@ -109,6 +127,7 @@ CurseForge/
 ow-electron/
 configstore/
 heroic/
+winboat/
 
 # =========================================
 # KDE / Plasma machine-specific

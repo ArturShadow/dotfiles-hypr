@@ -1,0 +1,9 @@
+dmg_url = "https://persistent.oaistatic.com/codex-app-prod/ChatGPT.dmg"
+initial_check_delay_seconds = 30
+check_interval_hours = 6
+auto_install_on_app_exit = true
+notifications = true
+workspace_root = "/home/lbluis/.cache/codex-update-manager"
+builder_bundle_root = "/opt/codex-desktop/update-builder"
+app_executable_path = "/opt/codex-desktop/electron"
+enable_wrapper_updates = true
